@@ -4,7 +4,12 @@ Meteor.startup(function () {
 		wrapLinks: true,
 		homeRoute: '/',
 		dashboardRoute: '/',
+		passwordSignupFields: 'USERNAME_AND_EMAIL',
 		waitEmailVerification: false
+	});
+
+	Accounts.ui.config({
+		passwordSignupFields: 'USERNAME_AND_EMAIL'
 	});
 
 });

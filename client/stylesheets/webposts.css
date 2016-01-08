@@ -12,3 +12,7 @@ img {
 .post:last-child {
 	border: 0px;
 }
+
+.navbar {
+	border-radius: 0px !important;
+}

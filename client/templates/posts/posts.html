@@ -28,53 +28,17 @@
 
 	<hr>
 
-	<div class="row post">
-		<div class="col-md-1">
-			<img src="img/profile.jpg">
+	{{#each posts}}
+		<div class="row post">
+			<div class="col-md-1">
+				<img src="{{getProfileImg userId}}">
+			</div>
+			<div class="col-md-11">
+				<small>Posted By {{username}} at {{createdAt}}</small>
+				<p>{{body}}</p>
+			</div>
 		</div>
-		<div class="col-md-11">
-			<small>Posted By Fred at 05-01-2015</small>
-			<p>This is the user's post.</p>
-		</div>
-	</div>
-
-	<div class="row post">
-		<div class="col-md-1">
-			<img src="img/profile.jpg">
-		</div>
-		<div class="col-md-11">
-			<small>Posted By Fred at 05-01-2015</small>
-			<p>This is the user's post.</p>
-		</div>
-	</div>
-
-	<div class="row post">
-		<div class="col-md-1">
-			<img src="img/profile.jpg">
-		</div>
-		<div class="col-md-11">
-			<small>Posted By Fred at 05-01-2015</small>
-			<p>This is the user's post.</p>
-		</div>
-	</div>
-
-	<div class="row post">
-		<div class="col-md-1">
-			<img src="img/profile.jpg">
-		</div>
-		<div class="col-md-11">
-			<small>Posted By Fred at 05-01-2015</small>
-			<p>This is the user's post.</p>
-		</div>
-	</div>
-
-	<div class="row post">
-		<div class="col-md-1">
-			<img src="img/profile.jpg">
-		</div>
-		<div class="col-md-11">
-			<small>Posted By Fred at 05-01-2015</small>
-			<p>This is the user's post.</p>
-		</div>
-	</div>
+	{{else}}
+		<p>No Posts</p>
+	{{/each}}
 </template>
